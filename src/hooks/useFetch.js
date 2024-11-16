@@ -10,12 +10,12 @@ export const useFetch = (url) => {
     
     const setLoadingState = () => {
 
-        return {
+       setState({
             data:null,
             isLoading:true,
             hasError:false,
             error: null,
-        };
+        });
     }
 
     const getFetch = async () => {
