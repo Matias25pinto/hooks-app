@@ -35,7 +35,7 @@ export const SimpleForm = () => {
                value={username}
                onChange={onChange}/>
 
-        {('matias' === username)&& <Message/>}
+        {('matias' === username)&& <Message title="El usuario ya existe" />}
 
         <input type="email"
                className="form-control mt-2"

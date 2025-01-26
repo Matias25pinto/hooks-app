@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
+import PropTypes from "prop-types";
 
-export const Message = ()=>{
+export const Message = ({title})=>{
 
     const [coords, setCoords] = useState({x:0, y:0});
     //Como trabajar con eventListener en useEffect
@@ -18,7 +19,11 @@ export const Message = ()=>{
         }
     }, []);
     return <>
-        <h3>Usuario ya existe</h3>
+        <h3>{title}</h3>
         <p>{JSON.stringify(coords)}</p>
     </>
+}
+
+Message.propTypes = {
+    title: PropTypes.string.isRequired
 }
